@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import navLogo from "@/assets/navlogo.png";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -37,9 +38,15 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <h1 className="text-lg sm:text-xl md:text-2xl font-bold">
-              <span className="text-gradient">Limas & Pacheco</span>
-            </h1>
+            <img 
+              src={navLogo} 
+              alt="Limas & Pacheco" 
+              className={`h-20 sm:h-24 md:h-28 w-auto transition-all duration-300 ${
+                isScrolled || isMobileMenuOpen 
+                  ? "brightness-0 saturate-100" 
+                  : "sepia-100 saturate-150 hue-rotate-[25deg] brightness-110"
+              }`}
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -51,7 +58,9 @@ const Navbar = () => {
                 className={`text-sm font-medium transition-smooth hover:text-accent ${
                   location.pathname === link.path
                     ? "text-accent"
-                    : "text-foreground"
+                    : isScrolled || isMobileMenuOpen
+                    ? "text-foreground"
+                    : "text-white"
                 }`}
               >
                 {link.name}
@@ -67,7 +76,11 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 text-foreground"
+            className={`lg:hidden p-2 transition-colors duration-300 ${
+              isScrolled || isMobileMenuOpen 
+                ? "text-foreground" 
+                : "text-accent"
+            }`}
           >
             {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>

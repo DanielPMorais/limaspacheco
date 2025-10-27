@@ -276,10 +276,10 @@ const Contato = () => {
                     <div>
                       <p className="font-semibold">E-mail</p>
                       <a
-                        href="mailto:contato@limasepacheco.com.br"
+                        href="mailto:contato@limaspacheco.com.br"
                         className="text-muted-foreground hover:text-accent transition-smooth"
                       >
-                        contato@limasepacheco.com.br
+                        contato@limaspacheco.com.br
                       </a>
                     </div>
                   </li>
@@ -299,12 +299,12 @@ const Contato = () => {
                     <div>
                       <p className="font-semibold">Instagram</p>
                       <a
-                        href="https://instagram.com/limasepacheco.assessoria"
+                        href="https://instagram.com/limaspacheco.assessoria"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-muted-foreground hover:text-accent transition-smooth"
                       >
-                        @limasepacheco.assessoria
+                        @limaspacheco.assessoria
                       </a>
                     </div>
                   </li>

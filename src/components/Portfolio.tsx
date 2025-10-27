@@ -5,28 +5,16 @@ import heroBeachWedding from "@/assets/hero-beach-wedding.jpg";
 
 const portfolioItems = [
   {
-    title: "Casamento na Praia",
-    category: "Casamento",
-    image: heroBeachWedding,
-    description: "Cerimônia ao pôr do sol em São Sebastião",
-  },
-  {
-    title: "Recepção Elegante",
-    category: "Casamento",
-    image: weddingDetail,
-    description: "Decoração sofisticada com detalhes em dourado",
-  },
-  {
-    title: "Evento Corporativo",
+    title: "Festa Empresarial",
     category: "Corporativo",
     image: corporateEvent,
-    description: "Jantar de gala para 200 convidados",
+    description: "Comemoração de 10 anos da empresa LW Construtora",
   },
   {
-    title: "Festa ao Ar Livre",
-    category: "Celebração",
-    image: casualCelebration,
-    description: "Ambiente descontraído com charme litorâneo",
+    title: "Casamento",
+    category: "Social",
+    image: heroBeachWedding,
+    description: "Cerimônia e recepção para Ana Flavia e Wallisson",
   },
 ];
 
@@ -44,7 +32,7 @@ const Portfolio = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 max-w-4xl mx-auto">
           {portfolioItems.map((item, index) => (
             <div
               key={index}

@@ -10,78 +10,78 @@ All colors MUST be HSL.
   :root {
     /* Brand Colors - Sophisticated palette inspired by coastal elegance */
     --background: 0 0% 100%;
-    --foreground: 220 45% 15%;
+    --foreground: 170 40% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 45% 15%;
+    --card-foreground: 170 40% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 45% 15%;
+    --popover-foreground: 170 40% 12%;
 
-    /* Navy Blue - Primary brand color */
-    --primary: 220 50% 25%;
+    /* Forest Green - Primary brand color inspired by logo background */
+    --primary: 170 40% 12%;
     --primary-foreground: 0 0% 100%;
     
     /* Champagne Gold - Elegant accent */
     --secondary: 40 45% 70%;
-    --secondary-foreground: 220 45% 15%;
+    --secondary-foreground: 170 40% 12%;
 
-    --muted: 220 15% 95%;
-    --muted-foreground: 220 20% 45%;
+    --muted: 170 15% 95%;
+    --muted-foreground: 170 20% 45%;
 
     /* Gold accent for highlights */
     --accent: 40 85% 55%;
-    --accent-foreground: 220 45% 15%;
+    --accent-foreground: 170 40% 12%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 20% 88%;
-    --input: 220 20% 88%;
-    --ring: 220 50% 25%;
+    --border: 170 20% 88%;
+    --input: 170 20% 88%;
+    --ring: 170 40% 12%;
 
     --radius: 0.5rem;
 
     /* Custom design tokens */
-    --gradient-hero: linear-gradient(135deg, hsl(220 50% 25%) 0%, hsl(220 50% 35%) 50%, hsl(210 60% 45%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(170 40% 12%) 0%, hsl(170 40% 22%) 50%, hsl(170 45% 32%) 100%);
     --gradient-gold: linear-gradient(135deg, hsl(40 85% 55%) 0%, hsl(40 70% 65%) 100%);
-    --gradient-overlay: linear-gradient(to bottom, hsl(220 50% 15% / 0.7), hsl(220 50% 15% / 0.4));
+    --gradient-overlay: linear-gradient(to bottom, hsl(170 40% 12% / 0.7), hsl(170 40% 12% / 0.4));
     
-    --shadow-soft: 0 2px 20px hsl(220 50% 25% / 0.08);
-    --shadow-medium: 0 8px 30px hsl(220 50% 25% / 0.12);
-    --shadow-strong: 0 20px 60px hsl(220 50% 25% / 0.18);
+    --shadow-soft: 0 2px 20px hsl(170 40% 12% / 0.08);
+    --shadow-medium: 0 8px 30px hsl(170 40% 12% / 0.12);
+    --shadow-strong: 0 20px 60px hsl(170 40% 12% / 0.18);
     
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.5, 1);
     --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.565, 1.55);
   }
 
   .dark {
-    --background: 220 45% 8%;
+    --background: 170 40% 8%;
     --foreground: 0 0% 95%;
 
-    --card: 220 40% 12%;
+    --card: 170 35% 12%;
     --card-foreground: 0 0% 95%;
 
-    --popover: 220 40% 12%;
+    --popover: 170 35% 12%;
     --popover-foreground: 0 0% 95%;
 
     --primary: 40 85% 55%;
-    --primary-foreground: 220 45% 15%;
+    --primary-foreground: 170 40% 12%;
 
-    --secondary: 220 35% 20%;
+    --secondary: 170 30% 20%;
     --secondary-foreground: 0 0% 95%;
 
-    --muted: 220 35% 18%;
-    --muted-foreground: 220 15% 65%;
+    --muted: 170 30% 18%;
+    --muted-foreground: 170 15% 65%;
 
     --accent: 40 85% 55%;
-    --accent-foreground: 220 45% 15%;
+    --accent-foreground: 170 40% 12%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 95%;
 
-    --border: 220 35% 20%;
-    --input: 220 35% 20%;
+    --border: 170 30% 20%;
+    --input: 170 30% 20%;
     --ring: 40 85% 55%;
   }
 }

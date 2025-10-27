@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {/* About */}
           <div>
-            <h3 className="text-lg sm:text-xl font-bold mb-4 text-gradient">
+            <h3 className="text-lg sm:text-xl font-cormorant font-bold mb-4 text-gradient">
               Limas & Pacheco
             </h3>
             <p className="text-xs sm:text-sm text-primary-foreground/80">
@@ -96,18 +96,12 @@ const Footer = () => {
             <h4 className="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Redes Sociais</h4>
             <div className="flex gap-3 sm:gap-4">
               <a
-                href="https://instagram.com/limasepacheco.assessoria"
+                href="https://instagram.com/limaspacheco.assessoria"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary-foreground/80 hover:text-accent transition-smooth"
               >
                 <Instagram size={20} />
-              </a>
-              <a
-                href="#"
-                className="text-primary-foreground/80 hover:text-accent transition-smooth"
-              >
-                <Facebook size={20} />
               </a>
             </div>
           </div>

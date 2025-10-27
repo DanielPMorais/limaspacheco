@@ -11,23 +11,23 @@ const Sobre = () => {
     {
       image: alanaLima,
       name: "Alana Lima",
-      role: "Co-fundadora & Diretora Criativa",
+      role: "Diretora Comercial e de Marketing",
       description:
-        "Especialista em design de eventos e decoração, com expertise em criar experiências visuais memoráveis."
+        "Responsável pela área Comercial e de Marketing, criando e conduzindo estratégias de divulgação e relacionamento com o público."
     },
     {
       image: jaynePacheco,
       name: "Jayne Pacheco",
-      role: "Co-fundadora & Diretora de Operações",
+      role: "Diretora Financeira e Administrativa",
       description:
-        "Mestre em logística e coordenação, garantindo a execução perfeita de cada detalhe.",
+        "Responsável pela área Financeira e Administrativa, garantindo o equilíbrio econômico e a gestão eficiente dos recursos.",
     },
     {
       image: rosanaLima,
       name: "Rosana Lima",
-      role: "Gerente de Relacionamento",
+      role: "Diretora de Operações e Eventos",
       description:
-        "Responsável por criar conexões significativas com clientes e fornecedores.",
+        "Responsável pelo Pilar Operacional, garantindo a qualidade e a excelência em cada evento realizado.",
     },
   ];
 
@@ -63,10 +63,10 @@ const Sobre = () => {
                 profundo da logística regional.
               </p>
               <p>
-                Com mais de 10 anos de experiência coletiva, nossa equipe
-                identificou uma necessidade no mercado: eventos que vão do
+                Nossa equipe identificou uma necessidade no mercado: eventos que vão do
                 sofisticado ao casual, todos executados com o mesmo nível de
-                excelência e atenção aos detalhes.
+                excelência e atenção aos detalhes. Estamos em fase de consolidação,
+                aplicando uma metodologia de gestão eficiente e focada em qualidade.
               </p>
               <p>
                 Hoje, somos reconhecidas pela nossa capacidade de adaptação,

@@ -3,22 +3,16 @@ import { Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Maria & João Silva",
-    event: "Casamento em Ubatuba",
+    name: "Marcelo Francisco",
+    event: "Empresário - LW Construtora",
     rating: 5,
-    text: "A Limas & Pacheco transformou nosso casamento em um sonho realizado. Cada detalhe foi perfeito, desde a decoração até a coordenação impecável do dia. Recomendamos de olhos fechados!",
+    text: "Contratamos a Limas & Pacheco para nossa festa de 10 anos da empresa. O profissionalismo e a atenção aos detalhes foram excepcionais. Recomendamos!",
   },
   {
-    name: "Empresa Tech Solutions",
-    event: "Evento Corporativo",
+    name: "Ana Flavia e Wallisson",
+    event: "Noivos",
     rating: 5,
-    text: "Profissionalismo excepcional! Nossa convenção anual foi um sucesso absoluto. A equipe cuidou de tudo com maestria e superou todas as nossas expectativas.",
-  },
-  {
-    name: "Ana Paula Costa",
-    event: "Aniversário 50 anos",
-    rating: 5,
-    text: "Minha festa foi exatamente como imaginei! A atenção aos detalhes e o carinho com que trataram cada aspecto do evento me deixaram encantada. Obrigada, Limas & Pacheco!",
+    text: "Procuramos um serviço de assessoria para nosso grande dia e encontramos na Limas & Pacheco exatamente o que precisávamos. Foi perfeito!",
   },
 ];
 
@@ -35,7 +29,7 @@ const Testimonials = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {testimonials.map((testimonial, index) => (
             <Card
               key={index}

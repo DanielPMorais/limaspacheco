@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import { useScrollToTop } from '@/hooks/use-scroll-to-top';
 
 interface PageTransitionProps {
   children: React.ReactNode;
@@ -9,15 +8,20 @@ interface PageTransitionProps {
 const PageTransition: React.FC<PageTransitionProps> = ({ children }) => {
   const location = useLocation();
   const [isVisible, setIsVisible] = useState(true);
-  
-  // Hook para scroll automático
-  useScrollToTop();
 
   useEffect(() => {
     setIsVisible(false);
     
     const timer = setTimeout(() => {
       setIsVisible(true);
+      // Scroll para o topo após a animação de entrada terminar
+      setTimeout(() => {
+        window.scrollTo({
+          top: 0,
+          left: 0,
+          behavior: 'smooth'
+        });
+      }, 50); // Pequeno delay para garantir que a animação terminou
     }, 300); // Timing mais rápido e consistente
 
     return () => clearTimeout(timer);
