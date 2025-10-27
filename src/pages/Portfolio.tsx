@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import PortfolioDetails from "@/components/PortfolioDetails";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import weddingDetail from "@/assets/wedding-detail.jpg";
@@ -9,57 +10,75 @@ import heroBeachWedding from "@/assets/hero-beach-wedding.jpg";
 
 const PortfolioPage = () => {
   const [filter, setFilter] = useState("Todos");
+  const [selectedItem, setSelectedItem] = useState<any>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const categories = ["Todos", "Casamentos", "Corporativo", "Celebrações"];
+  const categories = ["Todos", "Casamentos", "Corporativo", "Sociais", "Religiosos"];
 
   const portfolioItems = [
     {
-      title: "Casamento na Praia",
+      title: "Casamento na Praia - São Sebastião",
       category: "Casamentos",
       image: heroBeachWedding,
-      description: "Cerimônia ao pôr do sol em São Sebastião com 150 convidados",
+      description: "Cerimônia ao pôr do sol com 150 convidados",
       details:
-        "Um casamento dos sonhos à beira-mar, com decoração elegante em tons neutros e dourados. A cerimônia aconteceu no horário mágico do pôr do sol.",
+        "Assessoria completa para casamento à beira-mar em São Sebastião. Gestão logística especializada para lidar com os desafios costeiros, incluindo coordenação de fornecedores locais e controle de contingências climáticas.",
     },
     {
-      title: "Recepção de Luxo",
+      title: "Recepção Elegante - Caraguatatuba",
       category: "Casamentos",
       image: weddingDetail,
-      description: "Decoração sofisticada com detalhes em dourado",
+      description: "Decoração sofisticada com metodologia de taxa fixa",
       details:
-        "Recepção elegante com arranjos florais exuberantes, iluminação intimista e atenção aos mínimos detalhes.",
+        "Execução impecável de recepção com transparência total no orçamento. Aplicação da metodologia exclusiva de gestão de risco, garantindo tranquilidade completa para os noivos.",
     },
     {
-      title: "Convenção Empresarial",
+      title: "Convenção Empresarial - Ubatuba",
       category: "Corporativo",
       image: corporateEvent,
-      description: "Evento corporativo para 200 executivos",
+      description: "Evento corporativo estratégico para 200 executivos",
       details:
-        "Convenção anual de uma empresa de tecnologia com estrutura completa de audiovisual, coffee breaks premium e jantar de gala.",
+        "Gestão completa de convenção empresarial com foco em resultados. Aplicação do Manual de Logística Costeira para garantir execução sem falhas em ambiente corporativo de alto padrão.",
     },
     {
-      title: "Festa Garden Party",
-      category: "Celebrações",
+      title: "Aniversário de Debutante - Caraguatatuba",
+      category: "Sociais",
       image: casualCelebration,
-      description: "Celebração ao ar livre com 100 convidados",
+      description: "Festa de 15 anos com 100 convidados",
       details:
-        "Festa de aniversário de 50 anos em ambiente descontraído, com decoração rústico-chic e gastronomia regional.",
+        "Celebração social personalizada aplicando a metodologia híbrida e adaptável. Atendimento desde eventos sofisticados até celebrações casuais, sempre mantendo o mesmo padrão de excelência.",
     },
     {
-      title: "Casamento Intimista",
+      title: "Casamento Intimista - Ubatuba",
       category: "Casamentos",
       image: heroBeachWedding,
-      description: "Cerimônia para 50 convidados em Ubatuba",
+      description: "Cerimônia para 50 convidados em local paradisíaco",
       details:
-        "Casamento intimista com foco em experiências personalizadas para cada convidado, em local paradisíaco.",
+        "Assessoria do dia do evento com coordenação das três diretoras em campo. Rosana liderando operações, Alana no suporte estratégico e Jayne na gestão financeira de emergência.",
     },
     {
-      title: "Lançamento de Produto",
+      title: "Lançamento de Produto Corporativo",
       category: "Corporativo",
       image: corporateEvent,
       description: "Evento de lançamento para marca premium",
       details:
-        "Evento exclusivo de lançamento com experiências imersivas, coquetel de abertura e apresentação audiovisual.",
+        "Execução de evento corporativo estratégico com estrutura completa de audiovisual e experiências imersivas. Demonstração da capacidade de atender grandes marcas que exigem excelência na execução.",
+    },
+    {
+      title: "Batizado Familiar - São Sebastião",
+      category: "Religiosos",
+      image: weddingDetail,
+      description: "Cerimônia religiosa com celebração familiar",
+      details:
+        "Gestão completa de evento religioso e cultural, aplicando a expertise em logística do Litoral Norte para garantir que todos os aspectos cerimoniais sejam executados com perfeição.",
+    },
+    {
+      title: "Festa de Aniversário Corporativa",
+      category: "Corporativo",
+      image: corporateEvent,
+      description: "Confraternização de fim de ano empresarial",
+      details:
+        "Evento corporativo de confraternização com gestão de grande público. Aplicação da metodologia de gestão de projetos para eventos corporativos estratégicos.",
     },
   ];
 
@@ -67,6 +86,16 @@ const PortfolioPage = () => {
     filter === "Todos"
       ? portfolioItems
       : portfolioItems.filter((item) => item.category === filter);
+
+  const handleItemClick = (item: any) => {
+    setSelectedItem(item);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedItem(null);
+  };
 
   return (
     <div className="min-h-screen">
@@ -79,8 +108,8 @@ const PortfolioPage = () => {
             Nosso <span className="text-gradient">Portfólio</span>
           </h1>
           <p className="text-xl max-w-3xl mx-auto text-primary-foreground/90">
-            Cada evento é único e especial. Veja alguns dos momentos
-            inesquecíveis que tivemos o prazer de criar
+            Eventos executados com nossa metodologia exclusiva de gestão logística costeira. 
+            Desde casamentos sofisticados até eventos corporativos estratégicos no Litoral Norte.
           </p>
         </div>
       </section>
@@ -111,6 +140,7 @@ const PortfolioPage = () => {
               <div
                 key={index}
                 className="group relative overflow-hidden rounded-lg shadow-medium hover:shadow-strong transition-smooth cursor-pointer bg-card"
+                onClick={() => handleItemClick(item)}
               >
                 <div className="aspect-[4/3] overflow-hidden">
                   <img
@@ -152,10 +182,11 @@ const PortfolioPage = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">
-            Pronto Para Criar Seu Próprio Evento Memorável?
+            Pronto Para Seu Próximo Evento no Litoral Norte?
           </h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Entre em contato conosco e vamos transformar sua visão em realidade
+            Nossa assessoria completa garante execução impecável com metodologia de taxa fixa e 
+            transparência total. Assessoria Total, Parcial ou do Dia - sempre com excelência operacional.
           </p>
           <Button variant="hero" size="lg">
             Solicitar Orçamento
@@ -164,6 +195,11 @@ const PortfolioPage = () => {
       </section>
 
       <Footer />
+      <PortfolioDetails 
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+        item={selectedItem}
+      />
     </div>
   );
 };

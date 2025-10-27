@@ -264,10 +264,10 @@ const Contato = () => {
                     <div>
                       <p className="font-semibold">Telefone/WhatsApp</p>
                       <a
-                        href="tel:+5512999999999"
+                        href="tel:+5512992541687"
                         className="text-muted-foreground hover:text-accent transition-smooth"
                       >
-                        (12) 99999-9999
+                        (12) 99254-1687
                       </a>
                     </div>
                   </li>
@@ -276,10 +276,10 @@ const Contato = () => {
                     <div>
                       <p className="font-semibold">E-mail</p>
                       <a
-                        href="mailto:contato@limaspacheco.com.br"
+                        href="mailto:jainepachecobr@gmail.com.br"
                         className="text-muted-foreground hover:text-accent transition-smooth"
                       >
-                        contato@limaspacheco.com.br
+                        jainepachecobr@gmail.com.br
                       </a>
                     </div>
                   </li>

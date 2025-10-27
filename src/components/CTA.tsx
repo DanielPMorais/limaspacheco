@@ -32,7 +32,7 @@ const CTA = () => {
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-smooth" />
               </Button>
             </Link>
-            <a href="tel:+5512999999999">
+            <a href="tel:+5512992541687">
               <Button
                 variant="outline"
                 size="lg"
